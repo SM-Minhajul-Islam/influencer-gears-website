@@ -7,8 +7,8 @@
 }
 
 :root{
-    --primary-size: clamp(0.8rem,1rem,1.1rem);/*16px*/
-    --secondary-size:clamp(1.4rem,1.6rem,1.8rem);
+    --primary-size: clamp(0.8rem,1.2vw,1.1rem);/*16px*/
+    --secondary-size:clamp(1.4rem,1.8vw,1.8rem);/*24px*/
 
     --color-grey900:#18191F;
     --color-grey50:#787885;
@@ -17,12 +17,24 @@
     --color-btn:#E02C6D;
 }
 
-
-/* nav styles */
-header nav{
+/* common styles */
+header nav,
+.hero{
     width:95%;
     max-width: 1200px;
     margin:0 auto;
+}
+.btn{
+    border: none;
+    padding: 1rem;
+    background-color: var(--color-btn);
+    color: white;
+    font-size: var(--primary-size);
+}
+
+
+/* nav styles */
+header nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -41,8 +53,52 @@ nav ul .nav-link{
     text-decoration: none;
     color: var(--color-semi-dark);
 }
+nav ul .nav-link:hover{
+    background-color: #FAF3E0;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
 
-
+/* hero styles */
+.hero{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* grid-template-columns: repeat(2,1fr);
+    align-items: center; */
+}
+.hero .hero-content{
+    /* max-width: 580px; */
+    width: 50%;
+}
+.hero .hero-content .hero-title{
+    font-size: clamp(2rem,3.9vw,3.5rem);
+    color: var(--color-semi-dark);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.hero .hero-content .hero-description{
+    font-size: var(--primary-size);
+    color: var(--color-semi-dark);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.hero .hero-content .hero-btn{
+    border-radius: 40px;
+}
+.hero .hero-img{
+    background: url("images/Circle\ design.svg");
+    background-repeat: no-repeat;
+        background-size: contain;
+    /* background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.hero .hero-img img{
+    max-width: 100%;
+    /* width:clamp(50%) */
+}
 
 /* responsive websites */
 
@@ -53,6 +109,9 @@ nav ul .nav-link{
     }
     nav ul{
         gap: 1.5rem;
+        background-color: #F5F5F5;
+        padding: 0.5rem;
+        border-radius: 8px;
     }
 }
 
@@ -60,5 +119,13 @@ nav ul .nav-link{
 
 /* tablet devices */
 @media screen and (max-width:768px) {
-    
+    .hero{
+        flex-direction: column-reverse;
+    }
+    .hero .hero-content{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+
+}
 }
