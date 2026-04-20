@@ -204,7 +204,7 @@ nav ul .nav-link:hover{
 .feature{
     width: 90%;
     max-width: 1200px;
-    margin: 2vh auto;
+    margin: 5vh auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -229,6 +229,37 @@ nav ul .nav-link:hover{
     margin-bottom: 1rem;
 }
 
+/* footer styles */
+footer{
+    background-color: rgb(0, 0, 31);
+    color: white;
+    padding: 2rem;
+}
+.footer-content{
+    max-width:50%;
+    margin: 0 auto;
+    text-align: center;
+}
+.footer-content .footer-title{
+    font-size: var(--secondary-size);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.footer-content .footer-desc{
+    font-size: clamp(0.7rem,1.1vw,1rem);
+    color: #D9DBE1;
+}
+.footer-content a{
+    text-decoration: none;
+    color: white;
+}
+.footer-content .fa-brands{
+    padding: 1rem;
+    font-size: var(--secondary-size);
+    background-color: grey;
+    border-radius: 50%;
+}
+
 
 /* responsive websites */
 
@@ -237,12 +268,21 @@ nav ul .nav-link:hover{
     header nav{
         flex-direction: column;
     }
+   
     nav ul{
         gap: 1.5rem;
         background-color: #F5F5F5;
         padding: 0.5rem;
         border-radius: 8px;
     }
+     .hero{
+        flex-direction: column-reverse;
+    }
+    .hero .hero-content{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+}
     .product-section .card{
         max-width: 100%;
     }
@@ -255,6 +295,11 @@ nav ul .nav-link:hover{
 }
 .feature .feature-content{
     width: 90%;
+    text-align: center;
+}
+.footer-content{
+    max-width:100%;
+    margin: 0 auto;
     text-align: center;
 }
 }
@@ -280,6 +325,11 @@ nav ul .nav-link:hover{
 }
 .feature .feature-content{
     width: 90%;
+    text-align: center;
+}
+.footer-content{
+    max-width:100%;
+    margin: 0 auto;
     text-align: center;
 }
 }
